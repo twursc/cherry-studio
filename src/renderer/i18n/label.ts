@@ -27,6 +27,7 @@ const providerKeyMap = {
   'aws-bedrock': 'provider.aws-bedrock',
   'azure-openai': 'provider.azure-openai',
   baichuan: 'provider.baichuan',
+  baizhicloud: 'provider.baizhicloud',
   'baidu-cloud': 'provider.baidu-cloud',
   burncloud: 'provider.burncloud',
   cephalon: 'provider.cephalon',
