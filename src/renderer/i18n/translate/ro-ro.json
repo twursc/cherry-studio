@@ -4708,6 +4708,7 @@
     "aws-bedrock": "AWS Bedrock",
     "azure-openai": "Azure OpenAI",
     "baichuan": "Baichuan",
+    "baizhicloud": "Piața de modele Baizhi Cloud",
     "baidu-cloud": "Baidu Cloud",
     "burncloud": "BurnCloud",
     "cephalon": "Cephalon",

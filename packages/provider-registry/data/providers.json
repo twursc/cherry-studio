@@ -725,6 +725,42 @@
       }
     },
     {
+      "id": "baizhicloud",
+      "name": "百智云模型商店",
+      "description": "百智云模型商店 - AI model provider",
+      "defaultChatEndpoint": "anthropic-messages",
+      "endpointConfigs": {
+        "openai-chat-completions": {
+          "baseUrl": "https://ai-models.app.baizhi.cloud/api/openai/chat/completions#",
+          "adapterFamily": "openai-compatible"
+        },
+        "openai-responses": {
+          "baseUrl": "https://ai-models.app.baizhi.cloud/api/openai/responses#",
+          "adapterFamily": "openai"
+        },
+        "anthropic-messages": {
+          "baseUrl": "https://ai-models.app.baizhi.cloud/api/anthropic/v1/messages#",
+          "adapterFamily": "anthropic"
+        },
+        "openai-embeddings": {
+          "baseUrl": "https://ai-models.app.baizhi.cloud/api/openai",
+          "adapterFamily": "openai-compatible"
+        },
+        "jina-rerank": {
+          "baseUrl": "https://ai-models.app.baizhi.cloud/api/openai",
+          "adapterFamily": "openai-compatible"
+        }
+      },
+      "metadata": {
+        "website": {
+          "official": "https://baizhi.cloud/landing/model-square?utm_source=cherry-studio",
+          "apiKey": "https://ai-models.app.baizhi.cloud/console/keys",
+          "docs": "https://ai-models.app.baizhi.cloud/console/access-guide",
+          "models": "https://ai-models.app.baizhi.cloud/console/models"
+        }
+      }
+    },
+    {
       "id": "dashscope",
       "name": "Bailian",
       "description": "Bailian - AI model provider",

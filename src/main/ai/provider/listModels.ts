@@ -478,6 +478,24 @@ const ppioFetcher: ModelFetcher = {
   }
 }
 
+const BAIZHICLOUD_OPENAI_BASE_URL = 'https://ai-models.app.baizhi.cloud/api/openai'
+
+const baizhiCloudFetcher: ModelFetcher = {
+  match: (p) => p.id === SystemProviderIds.baizhicloud,
+  fetch: async (provider, signal) => {
+    const baseUrl = withoutTrailingSlash(
+      provider.endpointConfigs?.[ENDPOINT_TYPE.OPENAI_EMBEDDINGS]?.baseUrl ?? BAIZHICLOUD_OPENAI_BASE_URL
+    )
+    const response = await getFromApi({
+      url: `${baseUrl}/models`,
+      headers: await defaultHeaders(provider),
+      responseSchema: OpenAIModelsResponseSchema,
+      abortSignal: signal
+    })
+    return dedup(response.data, (m) => m.id).map((m) => toModel(m.id, provider, { ownedBy: m.owned_by }))
+  }
+}
+
 const aiHubMixFetcher: ModelFetcher = {
   match: (p) => p.id === SystemProviderIds.aihubmix,
   fetch: async (provider, signal) => {
@@ -573,6 +591,7 @@ const fetchers: ModelFetcher[] = [
   newApiFetcher,
   openRouterFetcher,
   ppioFetcher,
+  baizhiCloudFetcher,
   gatewayFetcher,
   openAIFetcher,
   openAICompatibleFetcher // always-match fallback, must be last
