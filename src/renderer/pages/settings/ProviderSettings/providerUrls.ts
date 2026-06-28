@@ -251,6 +251,17 @@ export const PROVIDER_URLS: Record<SystemProviderId, ProviderUrls> = {
       models: 'https://platform.baichuan-ai.com/prices'
     }
   },
+  baizhicloud: {
+    api: {
+      url: 'https://ai-models.app.baizhi.cloud/api/openai'
+    },
+    websites: {
+      official: 'https://baizhi.cloud/landing/model-square?utm_source=cherry-studio',
+      apiKey: 'https://ai-models.app.baizhi.cloud/console/keys',
+      docs: 'https://ai-models.app.baizhi.cloud/console/access-guide',
+      models: 'https://ai-models.app.baizhi.cloud/console/models'
+    }
+  },
   modelscope: {
     api: {
       url: 'https://api-inference.modelscope.cn/v1/'
